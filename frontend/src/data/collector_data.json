@@ -1,0 +1,320 @@
+{
+  "assignedFarms": [
+    {
+      "id": 1,
+      "farmId": "F-001",
+      "farmName": "Sunshine Dairy Farm",
+      "farmerName": "Rajesh Kumar",
+      "village": "Shirur",
+      "region": "Pune North",
+      "avgDailyYield": 50,
+      "totalAnimals": 12,
+      "sickAnimals": 0,
+      "status": "safe",
+      "withdrawalStatus": "none",
+      "lastCollection": "2025-11-15",
+      "complianceScore": 98,
+      "lastMRLTest": "2025-11-10",
+      "mrlStatus": "pass"
+    },
+    {
+      "id": 2,
+      "farmId": "F-002",
+      "farmName": "Green Valley Farm",
+      "farmerName": "Priya Sharma",
+      "village": "Alandi",
+      "region": "Pune North",
+      "avgDailyYield": 75,
+      "totalAnimals": 18,
+      "sickAnimals": 2,
+      "status": "warning",
+      "withdrawalStatus": "active",
+      "withdrawalDetails": {
+        "drugName": "Oxytetracycline",
+        "administeredDate": "2025-11-13",
+        "withdrawalPeriodDays": 5,
+        "daysRemaining": 3,
+        "affectedAnimals": 2
+      },
+      "lastCollection": "2025-11-14",
+      "complianceScore": 85,
+      "lastMRLTest": "2025-11-08",
+      "mrlStatus": "pass"
+    },
+    {
+      "id": 3,
+      "farmId": "F-003",
+      "farmName": "Organic Valley",
+      "farmerName": "Suresh Patel",
+      "village": "Chakan",
+      "region": "Pune West",
+      "avgDailyYield": 60,
+      "totalAnimals": 15,
+      "sickAnimals": 0,
+      "status": "safe",
+      "withdrawalStatus": "none",
+      "lastCollection": "2025-11-15",
+      "complianceScore": 100,
+      "lastMRLTest": "2025-11-12",
+      "mrlStatus": "pass"
+    },
+    {
+      "id": 4,
+      "farmId": "F-004",
+      "farmName": "Heritage Poultry",
+      "farmerName": "Amit Verma",
+      "village": "Kharadi",
+      "region": "Pune East",
+      "avgDailyYield": 40,
+      "totalAnimals": 10,
+      "sickAnimals": 3,
+      "status": "blocked",
+      "withdrawalStatus": "active",
+      "withdrawalDetails": {
+        "drugName": "Enrofloxacin",
+        "administeredDate": "2025-11-14",
+        "withdrawalPeriodDays": 4,
+        "daysRemaining": 3,
+        "affectedAnimals": 3
+      },
+      "lastCollection": "2025-11-12",
+      "complianceScore": 72,
+      "lastMRLTest": "2025-11-05",
+      "mrlStatus": "fail",
+      "mrlFailureReason": "Enrofloxacin exceeded limit"
+    },
+    {
+      "id": 5,
+      "farmId": "F-005",
+      "farmName": "Happy Cow Dairy",
+      "farmerName": "Deepa Singh",
+      "village": "Wakad",
+      "region": "Pune West",
+      "avgDailyYield": 85,
+      "totalAnimals": 20,
+      "sickAnimals": 1,
+      "status": "warning",
+      "withdrawalStatus": "active",
+      "withdrawalDetails": {
+        "drugName": "Amoxicillin",
+        "administeredDate": "2025-11-14",
+        "withdrawalPeriodDays": 3,
+        "daysRemaining": 2,
+        "affectedAnimals": 1
+      },
+      "lastCollection": "2025-11-15",
+      "complianceScore": 92,
+      "lastMRLTest": "2025-11-13",
+      "mrlStatus": "pass"
+    }
+  ],
+  "collectionSchedule": [
+    {
+      "id": 1,
+      "farmId": "F-001",
+      "farmName": "Sunshine Dairy Farm",
+      "scheduledDate": "2025-11-15",
+      "scheduledTime": "06:00",
+      "collectionType": "milk",
+      "status": "completed",
+      "collectedVolume": 50,
+      "collectorName": "Ramesh Yadav"
+    },
+    {
+      "id": 2,
+      "farmId": "F-002",
+      "farmName": "Green Valley Farm",
+      "scheduledDate": "2025-11-15",
+      "scheduledTime": "06:30",
+      "collectionType": "milk",
+      "status": "rejected",
+      "rejectionReason": "Active withdrawal period - 2 animals under treatment",
+      "collectorName": "Ramesh Yadav"
+    },
+    {
+      "id": 3,
+      "farmId": "F-003",
+      "farmName": "Organic Valley",
+      "scheduledDate": "2025-11-15",
+      "scheduledTime": "07:00",
+      "collectionType": "milk",
+      "status": "completed",
+      "collectedVolume": 60,
+      "collectorName": "Ramesh Yadav"
+    },
+    {
+      "id": 4,
+      "farmId": "F-004",
+      "farmName": "Heritage Poultry",
+      "scheduledDate": "2025-11-15",
+      "scheduledTime": "07:30",
+      "collectionType": "meat",
+      "status": "blocked",
+      "rejectionReason": "Recent MRL failure - farm under audit",
+      "collectorName": "Ramesh Yadav"
+    },
+    {
+      "id": 5,
+      "farmId": "F-005",
+      "farmName": "Happy Cow Dairy",
+      "scheduledDate": "2025-11-15",
+      "scheduledTime": "08:00",
+      "collectionType": "milk",
+      "status": "pending",
+      "collectorName": "Ramesh Yadav"
+    }
+  ],
+  "batches": [
+    {
+      "id": 1,
+      "batchId": "B-2025-NOV-15-T101",
+      "tankerNumber": "T-101",
+      "date": "2025-11-15",
+      "status": "active",
+      "currentVolume": 340,
+      "targetVolume": 450,
+      "farmsIncluded": ["F-001", "F-003"],
+      "totalFarms": 2,
+      "sealed": false,
+      "collectorId": "COL-001",
+      "collectorName": "Ramesh Yadav"
+    },
+    {
+      "id": 2,
+      "batchId": "B-2025-NOV-14-T101",
+      "tankerNumber": "T-101",
+      "date": "2025-11-14",
+      "status": "sealed",
+      "currentVolume": 450,
+      "targetVolume": 450,
+      "farmsIncluded": ["F-001", "F-003", "F-005"],
+      "totalFarms": 3,
+      "sealed": true,
+      "sealedTime": "2025-11-14T10:30:00",
+      "certificateId": "CERT-2025-1114-001",
+      "collectorId": "COL-001",
+      "collectorName": "Ramesh Yadav"
+    }
+  ],
+  "labSamples": [
+    {
+      "id": 1,
+      "sampleId": "S-2025-001",
+      "farmId": "F-001",
+      "farmName": "Sunshine Dairy Farm",
+      "batchId": "B-2025-NOV-10-T101",
+      "sampleType": "milk",
+      "collectionDate": "2025-11-10",
+      "collectorName": "Ramesh Yadav",
+      "status": "tested",
+      "labStatus": "pass",
+      "testResults": {
+        "Oxytetracycline": 45,
+        "Amoxicillin": 2
+      }
+    },
+    {
+      "id": 2,
+      "sampleId": "S-2025-002",
+      "farmId": "F-004",
+      "farmName": "Heritage Poultry",
+      "batchId": "B-2025-NOV-05-T102",
+      "sampleType": "meat",
+      "collectionDate": "2025-11-05",
+      "collectorName": "Ramesh Yadav",
+      "status": "tested",
+      "labStatus": "fail",
+      "testResults": {
+        "Enrofloxacin": 250
+      },
+      "mrlViolation": "Enrofloxacin exceeded MRL limit of 200 ppb"
+    },
+    {
+      "id": 3,
+      "sampleId": "S-2025-003",
+      "farmId": "F-005",
+      "farmName": "Happy Cow Dairy",
+      "batchId": "B-2025-NOV-13-T101",
+      "sampleType": "milk",
+      "collectionDate": "2025-11-13",
+      "collectorName": "Ramesh Yadav",
+      "status": "in-transit",
+      "labStatus": "pending"
+    }
+  ],
+  "collectionHistory": [
+    {
+      "id": 1,
+      "date": "2025-11-15",
+      "time": "06:00",
+      "farmId": "F-001",
+      "farmName": "Sunshine Dairy Farm",
+      "quantity": 50,
+      "unit": "Liters",
+      "status": "accepted",
+      "batchId": "B-2025-NOV-15-T101",
+      "collectorName": "Ramesh Yadav"
+    },
+    {
+      "id": 2,
+      "date": "2025-11-15",
+      "time": "06:30",
+      "farmId": "F-002",
+      "farmName": "Green Valley Farm",
+      "quantity": 0,
+      "unit": "Liters",
+      "status": "rejected",
+      "rejectionReason": "Active withdrawal period detected",
+      "collectorName": "Ramesh Yadav"
+    },
+    {
+      "id": 3,
+      "date": "2025-11-15",
+      "time": "07:00",
+      "farmId": "F-003",
+      "farmName": "Organic Valley",
+      "quantity": 60,
+      "unit": "Liters",
+      "status": "accepted",
+      "batchId": "B-2025-NOV-15-T101",
+      "collectorName": "Ramesh Yadav"
+    },
+    {
+      "id": 4,
+      "date": "2025-11-14",
+      "time": "06:00",
+      "farmId": "F-001",
+      "farmName": "Sunshine Dairy Farm",
+      "quantity": 50,
+      "unit": "Liters",
+      "status": "accepted",
+      "batchId": "B-2025-NOV-14-T101",
+      "collectorName": "Ramesh Yadav"
+    },
+    {
+      "id": 5,
+      "date": "2025-11-14",
+      "time": "07:30",
+      "farmId": "F-005",
+      "farmName": "Happy Cow Dairy",
+      "quantity": 82,
+      "unit": "Liters",
+      "status": "accepted",
+      "batchId": "B-2025-NOV-14-T101",
+      "collectorName": "Ramesh Yadav"
+    },
+    {
+      "id": 6,
+      "date": "2025-11-13",
+      "time": "06:15",
+      "farmId": "F-002",
+      "farmName": "Green Valley Farm",
+      "quantity": 45,
+      "unit": "Liters",
+      "status": "rejected",
+      "rejectionReason": "Volume exceeds safe limit - suspected mixing",
+      "attemptedQuantity": 75,
+      "collectorName": "Ramesh Yadav"
+    }
+  ]
+}

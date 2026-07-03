@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#10b981" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="VASUDHA" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="128x128" href="/icons/icon-128x128.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png" />
+    
+  <!-- Development-friendly Content Security Policy: allow Tesseract.js CDN, Google Translate, Supabase, YouTube, AI APIs (Gemini & Groq), Fast2SMS, data URIs, workers and inline styles/scripts for local dev/HMR -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob: https://www.gstatic.com https://fonts.gstatic.com https://*.googleusercontent.com https://www.google.com https://translate.googleapis.com http://www.google.com http://translate.google.com https://*.supabase.co https://i.ytimg.com https://i9.ytimg.com; font-src 'self' data: https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://translate.google.com https://translate.googleapis.com https://translate-pa.googleapis.com http://translate.google.com https://www.youtube.com https://s.ytimg.com; worker-src 'self' blob:; connect-src 'self' data: blob: https://cdn.jsdelivr.net https://unpkg.com https://translate.googleapis.com https://translate-pa.googleapis.com http://translate.googleapis.com https://*.supabase.co wss://*.supabase.co https://generativelanguage.googleapis.com https://api.groq.com https://www.fast2sms.com ws://localhost:* http://localhost:*; frame-src 'self' https://translate.google.com https://translate.googleapis.com https://www.youtube.com https://www.youtube-nocookie.com http://localhost:*">
+    <title>VASUDHA - Digital Farm Management Portal</title>
+    <meta name="description" content="VASUDHA - Digital Farm Management Portal for Maximum Residue Limits (MRL) and Antimicrobial Usage (AMU) monitoring in livestock sector by Ministry of Fisheries, Animal Husbandry & Dairying, Government of India." />
+    <meta name="keywords" content="VASUDHA, digital farm management, livestock monitoring, MRL monitoring, antimicrobial usage, AMU, farm compliance, veterinary portal, livestock safety, Government of India" />
+    <meta name="author" content="Ministry of Fisheries, Animal Husbandry & Dairying, Government of India" />
+    <meta property="og:title" content="Vasudha" />
+    <meta property="og:description" content="Vasudha - Digital Farm Management Portal for Maximum Residue Limits (MRL) and Antimicrobial Usage (AMU) monitoring in livestock sector by Ministry of Fisheries, Animal Husbandry & Dairying, Government of India." />
+    <meta property="og:image" content="/logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vasudha" />
+    <meta name="twitter:description" content="Vasudha - Digital Farm Management Portal for Maximum Residue Limits (MRL) and Antimicrobial Usage (AMU) monitoring in livestock sector by Ministry of Fisheries, Animal Husbandry & Dairying, Government of India." />
+    <meta name="twitter:image" content="/logo.png" />
+    <link rel="canonical" href="https://yourdomain.com/" />
+    <style>
+      /* Aggressively hide Google Translate top bar */
+      body {
+        top: 0 !important;
+        position: static !important;
+      }
+      
+      .goog-te-banner-frame,
+      .goog-te-banner-frame.skiptranslate,
+      iframe.goog-te-banner-frame,
+      iframe.skiptranslate[style*="box-shadow"],
+      .skiptranslate iframe,
+      #goog-gt-tt,
+      .goog-te-balloon-frame {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        max-height: 0 !important;
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+        z-index: -9999 !important;
+      }
+      
+      /* Ensure body doesn't get pushed down */
+      html body {
+        position: static !important;
+        top: 0 !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+      }
+      
+      /* Hide the translate notification bar */
+      .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Aggressively remove Google Translate top bar
+      (function() {
+        var hideGoogleBar = function() {
+          // Hide all iframes related to Google Translate
+          var iframes = document.querySelectorAll('iframe.skiptranslate, iframe.goog-te-banner-frame, .goog-te-banner-frame');
+          iframes.forEach(function(iframe) {
+            iframe.style.display = 'none';
+            iframe.style.visibility = 'hidden';
+            iframe.style.opacity = '0';
+            iframe.style.height = '0';
+            iframe.style.position = 'absolute';
+            iframe.style.top = '-9999px';
+          });
+          
+          // Reset body position
+          document.body.style.top = '0';
+          document.body.style.position = 'static';
+          
+          // Remove the translate bar div if it exists
+          var banner = document.querySelector('.goog-te-banner-frame');
+          if (banner && banner.parentNode) {
+            banner.parentNode.removeChild(banner);
+          }
+        };
+        
+        // Run immediately
+        hideGoogleBar();
+        
+        // Run on DOM ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', hideGoogleBar);
+        }
+        
+        // Run on window load
+        window.addEventListener('load', hideGoogleBar);
+        
+        // Run periodically to catch dynamically added elements
+        setInterval(hideGoogleBar, 100);
+        
+        // Observe DOM changes
+        var observer = new MutationObserver(hideGoogleBar);
+        observer.observe(document.documentElement, {
+          childList: true,
+          subtree: true
+        });
+      })();
+    </script>
+  </body>
+</html>

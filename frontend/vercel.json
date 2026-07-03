@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "api/otp.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    { "source": "/api/otp", "destination": "/api/otp.js" },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
